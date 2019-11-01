@@ -1,0 +1,14 @@
+<html lang="EN">
+    <head>
+        <title>ZeroBot Controller - redirection</title>
+        <meta id="red" http-equiv="refresh" content="0; URL=#" />
+    </head>
+
+    <body>
+        <a id="url" href="#">Almost There! Click to Redirect to port :3000</a>
+        <script>
+            document.getElementById("red").content = "0; url=//" + window.location.hostname + ":3000";
+            document.getElementById("url").href =           "//" + window.location.hostname + ":3000"
+        </script>
+    </body>
+</html>
