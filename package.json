@@ -1,0 +1,21 @@
+{
+  "name": "ZeroBotPro-v2",
+  "description": "Based on the 'Raspberry Pi Zero FPV Robot' hackaday project: update to latest dependencies compatibility.",
+  "version": "1.0.0",
+  "homepage": "https://github.com/dclause/ZeroBotPro2",
+  "license": "GPL-3.0",
+  "main":"app.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dclause/ZeroBotPro2.git"
+  },
+  "scripts": {
+    "start": "sudo node app.js"
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "socket.io": "^2.0.4",
+    "dclause/node-ads1x15-i2cbus": "^1.0.3",
+    "pigpio": "^0.7.0"
+  }
+}
