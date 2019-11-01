@@ -23,11 +23,11 @@ child = exec("sudo bash start_stream.sh", function(error, stdout, stderr){});
 //Whenever someone connects this gets executed
 io.on('connection', function(socket){
   console.log('A user connected');
-  
+
   socket.on('pos', function (msx, msy) {
     //console.log('X:' + msx + ' Y: ' + msy);
     //io.emit('posBack', msx, msy);
-	
+
     msx = Math.min(Math.max(parseInt(msx), -255), 255);
     msy = Math.min(Math.max(parseInt(msy), -255), 255);
 
@@ -49,11 +49,11 @@ io.on('connection', function(socket){
 
 
   });
-  
+
   socket.on('light', function(toggle) {
-    LED.digitalWrite(toggle);    
-  });  
-  
+    LED.digitalWrite(toggle);
+  });
+
   socket.on('cam', function(toggle) {
     var numPics = 0;
     console.log('Taking a picture..');
@@ -67,13 +67,13 @@ io.on('connection', function(socket){
         io.emit('cam', 1);
       });
     });
-    
+
   });
-  
+
   socket.on('power', function(toggle) {
     child = exec("sudo poweroff");
   });
-  
+
   //Whenever someone disconnects this piece of code is executed
   socket.on('disconnect', function () {
     console.log('A user disconnected');
@@ -91,7 +91,7 @@ io.on('connection', function(socket){
     });
     if(!adc.busy){
       adc.readADCSingleEnded(0, '4096', '250', function(err, data){ //channel, gain, samples
-        if(!err){          
+        if(!err){
           voltage = 2*parseFloat(data)/1000;
           console.log("ADC: ", voltage);
           io.emit('volt', voltage);
