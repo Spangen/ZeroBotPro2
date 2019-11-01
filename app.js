@@ -14,7 +14,7 @@ var Gpio = require('pigpio').Gpio,
   LED = new Gpio(22, {mode: Gpio.OUTPUT});
 
 app.get('/', function(req, res){
-  res.sendfile('Touch.html');
+  res.sendFile('Touch.html');
   console.log('HTML sent to client');
 });
 
