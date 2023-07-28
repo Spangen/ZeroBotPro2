@@ -1,8 +1,13 @@
+# ZeroBotPro v3
+
 Must add info on project later. Have just learned to push to GIT. But lots of additions that might interest someone.
 
 Enjoy...
 
 //Spangen
+
+____________________________________________________________________________________________________________
+Original TXT:
 
 # ZeroBotPro v2
 
