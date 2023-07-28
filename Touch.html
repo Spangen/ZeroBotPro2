@@ -5,7 +5,7 @@
 <meta charset=utf-8>
 <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" /> 
 <meta name="mobile-web-app-capable" content="yes">
-<title>Touch Control</title>
+<title>Noddy</title>
 <style type="text/css"> 
   
   * {
@@ -32,96 +32,165 @@
 		text-align:center;
 		background-color:#ff0000;
 	}
-	/* Headlight toggle switch (source: http://callmenick.com/post/css-toggle-switch-examples) */
-	.cmn-toggle {
-		position: absolute;
-		margin-left: -9999px;
-		visibility: hidden;
-	}
-	.cmn-toggle + label {
-		display: block;
-		position: relative;
-		cursor: pointer;
-		outline: none;
-		user-select: none;
-	}
-	input.cmn-toggle-round-flat + label {
-  	background-color: transparent;
-  	border-radius: 10%;
+
+/*******************************************************************************************/
+
+	.system_button {
+		color: #000;
+		background-color: #990000;
+		border-radius: 30%;
 		border: 2px;
 		border-style: solid;
 		border-color: white;
 		text-align:center;
-    
-		padding-top: 20%;
-    padding-bottom: 20%;
-    font-size: 16px;
-		margin: 40% 7% 10%;
+		padding-top: 1%;
+		padding-bottom: 1%;
+		font-size: 80%;
+		margin: 5% 5%;
+		cursor: pointer;
+	}
+
+	.system_button:active {
+		background-color: red;
+	}
+
+/*******************************************************************************************/
+
+	.arming_button {
+		color: #000000;
+		background-color: #550000;
+		border-radius: 10%;
+		border: 2px;
+		border-style: solid;
+		border-color: white;
+		text-align:center;
+		padding-top: 3%;
+		padding-bottom: 3%;
+#		font-size: 18px;
+		font-size: 100%;
+		margin: 5% 5%;
 		cursor: pointer;
 		transition: background 0.4s;
 	}
-	input.cmn-toggle-round-flat:checked + label {
-		background-color: gray;
+
+	.system_button:active {
+		color: #ffff00;
+		background-color: #ff0000;
 	}
-	.cam_button {
+
+
+/*******************************************************************************************/
+
+	.mini_button {
 		background-color: transparent;
-		border-radius: 100%;
-		border: 7px;
-		border-style: solid;
-		border-color: white;
-		text-align:center;
-		
-		padding-top: 40%;
-    padding-bottom: 40%;
-    padding-left: 40%;
-    padding-right: 40%;
-		font-size: 16px;
-		margin: 50% 3% 4% 4%;
-		cursor: pointer;
-	}
-	
-	.cam_button:active {
-		background-color: gray;
-	}
-  
-  .off_button {
-    background-color: transparent;
 		border-radius: 10%;
 		border: 2px;
 		border-style: solid;
 		border-color: white;
 		text-align:center;
-		
-    padding-top: 20%;
-    padding-bottom: 20%;
-    font-size: 100%;
-    margin: 10% 7%;
+		padding-top: 1%;
+		padding-bottom: 1%;
+		font-size: 80%;
+		margin: 5% 5%;
 		cursor: pointer;
+		transition: background 0.4s;
 	}
-  .off_button:active {
-  	background-color: gray;
+
+	.mini_button:active {
+		background-color: green;
 	}
-  
-  .light_button {
-  	background-color: transparent;
+
+/*******************************************************************************************/
+
+	.small_button {
+		background-color: transparent;
 		border-radius: 10%;
 		border: 2px;
 		border-style: solid;
 		border-color: white;
 		text-align:center;
-    
-		padding-top: 20%;
-    padding-bottom: 20%;
-    font-size: 16px;
-		margin: 40% 7% 10%;
+		padding-top: 2%;
+		padding-bottom: 2%;
+		font-size: 100%;
+		margin: 5% 5%;
 		cursor: pointer;
+		transition: background 0.4s;
 	}
-	.light_button:checked {
-  	background-color: #b1b;
+
+	.small_button:active {
+		background-color: green;
 	}
-  
+
+/*******************************************************************************************/
+
+	.medi_button {
+		background-color: transparent;
+		border-radius: 10%;
+		border: 2px;
+		border-style: solid;
+		border-color: white;
+		text-align:center;
+		padding-top: 10%;
+		padding-bottom: 10%;
+		font-size: 100%;
+		margin: 5% 5%;
+		cursor: pointer;
+		transition: background 0.4s;
+	}
+
+	.medi_button:active {
+		background-color: green;
+	}
+
+/*******************************************************************************************/
+
+	.dmedi_button {
+		background-color: transparent;
+		border-radius: 10%;
+		border: 2px;
+		border-style: solid;
+		border-color: white;
+		text-align:center;
+		padding-top: 10%;
+		padding-bottom: 10%;
+		font-size: 100%;
+		margin: 5% 5%;
+		width: 35%;
+		cursor: pointer;
+		transition: background 0.4s;
+	}
+
+	.dmedi_button:active {
+		background-color: green;
+	}
+
+/*******************************************************************************************/
+
+	.dual_button {
+		background-color: transparent;
+		border-radius: 10%;
+		border: 2px;
+		border-style: solid;
+		border-color: white;
+		text-align:center;
+		padding-left: 2%;
+		padding-right: 2%;
+		padding-top: 2%;
+		padding-bottom: 2%;
+		font-size: 85%;
+		margin: 5% 5%;
+		cursor: pointer;
+		transition: background 0.4s;
+	}
+
+	.dual_button:active {
+		background-color: green;
+	}
+
+/*******************************************************************************************/
+
 	.sidenav {
-		color: #fff;
+		color: #0f0;
 		height: 100%;
 		width: 13%;
 		position: fixed;
@@ -129,21 +198,19 @@
 		top: 0px;
 		background-color: #111;
 		overflow-x: hidden;
-		padding-top: 20px;
+		padding-top: 5px;
 		font-family: 'Roboto', sans-serif;
 	}
   
- 
-	
-  
-  
-  
-  
 	p#stream{
 		position: relative; 
-        top: -15px; 
+		top: -35px;
 	}
+
 </style>
+
+/*******************************************************************************************/
+
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
 </head>
@@ -210,7 +277,8 @@ var sendFlag = false;
 setupCanvas();
 
 var mouseX, mouseY, 
-	// is this running in a touch capable environment?
+
+// is this running in a touch capable environment?
 	mouseDown = false,
 	touches = []; // array of touch vectors;
 
@@ -218,14 +286,11 @@ setInterval(draw, 1000/30); // draw app at 30fps
 
 setInterval(sendControls, 1000/20); // send control input at 20fps
 
-
-
 	canvas.addEventListener( 'touchstart', onTouchStart, false );
 	canvas.addEventListener( 'touchmove', onTouchMove, false );
 	canvas.addEventListener( 'touchend', onTouchEnd, false );
 	window.onorientationchange = resetCanvas;  
 	window.onresize = resetCanvas;  
-
 	
 	canvas.addEventListener( 'mousemove', onMouseMove, false );
 	canvas.addEventListener( 'mousedown', onMouseDown, false );
@@ -246,37 +311,49 @@ function resetCanvas (e) {
 	window.scrollTo(0,0); 
 }
 
-var rawLeft, rawRight, MaxJoy = 255, MinJoy = -255, MaxValue = 255,
+	var rawLeft, rawRight, MaxJoy = 255, MinJoy = -255, MaxValue = 255,
 	MinValue = -255, RawLeft, RawRight, ValLeft, ValRight;
-var leftMot = 0, rightMot = 0;
-function Remap(value, from1, to1, from2, to2){
+	var leftMot = 0, rightMot = 0;
+	function Remap(value, from1, to1, from2, to2){
 	return (value - from1) / (to1 - from1) * (to2 - from2) + from2;
 }
 
-//source: http://www.dyadica.co.uk/basic-differential-aka-tank-drive/
 function tankDrive(x, y){
 
-	// First hypotenuse
+//##########################################################################################
+//source: http://www.dyadica.co.uk/basic-differential-aka-tank-drive/
+//##########################################################################################
+
+// First hypotenuse
+
 	var z = Math.sqrt(x * x + y * y);
-	// angle in radians
+
+// angle in radians
+
 	var rad = Math.acos(Math.abs(x) / z);
 
 	if (isNaN(rad)) rad = 0;
-	// and in degrees
+
+// and in degrees
+
 	var angle = rad * 180 / Math.PI;
 	
-	// Now angle indicates the measure of turn
-    // Along a straight line, with an angle o, the turn co-efficient is same
-    // this applies for angles between 0-90, with angle 0 the co-eff is -1
-    // with angle 45, the co-efficient is 0 and with angle 90, it is 1
-    var tcoeff = -1 + (angle / 90) * 2;
+// Now angle indicates the measure of turn
+// Along a straight line, with an angle o, the turn co-efficient is same
+// this applies for angles between 0-90, with angle 0 the co-eff is -1
+// with angle 45, the co-efficient is 0 and with angle 90, it is 1
+
+	var tcoeff = -1 + (angle / 90) * 2;
 	var turn = tcoeff * Math.abs(Math.abs(y) - Math.abs(x));
 
 	turn = Math.round(turn * 100) / 100;
-	// And max of y or x is the movement
+
+// And max of y or x is the movement
+
 	var move = Math.max(Math.abs(y), Math.abs(x));
 
-	// First and third quadrant
+// First and third quadrant
+
 	if ((x >= 0 && y >= 0) || (x < 0 && y < 0)){
 		rawLeft = move;
 		rawRight = turn;
@@ -284,14 +361,16 @@ function tankDrive(x, y){
 		rawRight = move;
 		rawLeft = turn;
 	}
-	// Reverse polarity
+
+// Reverse polarity
+
 	if (y < 0) {
 		rawLeft = 0 - rawLeft;
 		rawRight = 0 - rawRight;
 	}
 
 	RawLeft = rawLeft;
-    RawRight = rawRight;
+	RawRight = rawRight;
 
 	leftMot = Remap(rawLeft, MinJoy, MaxJoy, MinValue, MaxValue);
 	rightMot = Remap(rawRight, MinJoy, MaxJoy, MinValue, MaxValue);
@@ -377,33 +456,51 @@ function draw() {
 	//c.fillText("Temperature: "+temperature+"°C", 10, 30);
 	
 	
+//##########################################################################################
+//##########################################################################################
+// HANDLE data from SOCKET
+//##########################################################################################
+//##########################################################################################
+
 	socket.on('temp', function(msg){
 		document.getElementById("temp").innerHTML = parseInt(msg) + '°C';
 		temperature = msg;
 	});
 
-	socket.on('volt', function(msg){
-		voltage = msg;
-		if(voltage > 0){ // Don't show voltage without ADC
-			document.getElementById("volt").innerHTML = msg.toFixed(2) + 'V';
-		} else{
-			document.getElementById("volt").innerHTML = ' ';
-		}
+	socket.on('power', function(msg1, msg2, msg3, msg4, msg5){
+		document.getElementById("volt").innerHTML = (msg1) + ' V';
+		document.getElementById("vcell").innerHTML = (msg2) + ' V';
+		document.getElementById("v5v").innerHTML = (msg3) + ' V';
+		document.getElementById("ileft").innerHTML = (msg4) + ' A';
+		document.getElementById("iright").innerHTML = (msg5) + ' A';
+//		document.getElementById("iright").style = "padding:0%;font-size: 130%;color: #ffffff;background-color: #990000;"
+//		document.getElementById("test").style = "font-size: 130%;color: #ffffff;background-color: green;"
+//		document.getElementById("test").innerText = 'LEDS YES';
 	});
-	
-	socket.on('cam', function(msg){
-		document.getElementById("stream").innerHTML = img;
+
+
+	socket.on('wifi', function(msg1, msg2){
+		document.getElementById("rssi").innerHTML = (msg1) + ' dBm';
+		siglevel = msg1;
+		document.getElementById("qual").innerHTML = (msg2);
+		quality = msg2;
 	});
+
 }
 
+//##########################################################################################
+//##########################################################################################
+// HANDLE INPUT TOUCHSCREEN
+//##########################################################################################
+//##########################################################################################
 /*	
  *	Touch event (e) properties : 
- *	e.touches: 			Array of touch objects for every finger currently touching the screen
+ *	e.touches: 		Array of touch objects for every finger currently touching the screen
  *	e.targetTouches: 	Array of touch objects for every finger touching the screen that
- *						originally touched down on the DOM object the transmitted the event.
+ *				originally touched down on the DOM object the transmitted the event.
  *	e.changedTouches	Array of touch objects for touches that are changed for this event. 					
- *						I'm not sure if this would ever be a list of more than one, but would 
- *						be bad to assume. 
+ *				I'm not sure if this would ever be a list of more than one, but would 
+ *				be bad to assume. 
  *
  *	Touch objects : 
  *
@@ -416,6 +513,8 @@ function draw() {
  *	pageX: Relative to the full page (includes scrolling)
  *	pageY: Relative to the full page (includes scrolling)
  */	
+//##########################################################################################
+//##########################################################################################
 
 function onTouchStart(e) {
  
@@ -438,13 +537,6 @@ function onTouchStart(e) {
 	touches = e.touches; 
 }
 
-function onMouseDown(event) {
-	leftTouchStartPos.reset(event.offsetX, event.offsetY); 	
-	leftTouchPos.copyFrom(leftTouchStartPos); 
-	leftVector.reset(0,0); 
-	mouseDown = true;
-}
- 
 function onTouchMove(e) {
 	 // Prevent the browser from doing its default thing (scroll, zoom)
 	e.preventDefault();
@@ -456,6 +548,15 @@ function onTouchMove(e) {
 			leftTouchPos.reset(touch.clientX, touch.clientY); 
 			leftVector.copyFrom(leftTouchPos); 
 			leftVector.minusEq(leftTouchStartPos);
+
+//##########################################################################################
+// These line halves TOUCH control sensitivity (c) Spangen
+//##########################################################################################
+//		leftVector.x = leftVector.x / 5
+//		leftVector.y = leftVector.y / 5
+		leftVector.x = leftVector.x / 2
+//		leftVector.y = leftVector.y / 5
+
 			sendFlag = true;
 			break; 		
 		}		
@@ -465,19 +566,6 @@ function onTouchMove(e) {
 	
 } 
 
-function onMouseMove(event) {
-
-	mouseX = event.offsetX;
-	mouseY = event.offsetY;
-	if(mouseDown){
-		leftTouchPos.reset(event.offsetX, event.offsetY); 
-		leftVector.copyFrom(leftTouchPos); 
-		leftVector.minusEq(leftTouchStartPos); 	
-		sendFlag = true;
-	}
-	
-}
- 
 function onTouchEnd(e) { 
    
    	touches = e.touches; 
@@ -496,6 +584,40 @@ function onTouchEnd(e) {
    
 }
 
+//##########################################################################################
+//##########################################################################################
+// HANDLE INPUT MOUSE
+//##########################################################################################
+//##########################################################################################
+	
+function onMouseDown(event) {
+	leftTouchStartPos.reset(event.offsetX, event.offsetY); 	
+	leftTouchPos.copyFrom(leftTouchStartPos); 
+	leftVector.reset(0,0); 
+	mouseDown = true;
+}
+ 
+function onMouseMove(event) {
+
+	mouseX = event.offsetX;
+	mouseY = event.offsetY;
+	if(mouseDown){
+		leftTouchPos.reset(event.offsetX, event.offsetY); 
+		leftVector.copyFrom(leftTouchPos); 
+		leftVector.minusEq(leftTouchStartPos); 	
+//##########################################################################################
+// These line halves MOUSE control sensitivity (c) Spangen
+//##########################################################################################
+//		leftVector.x = leftVector.x / 2.5
+//		leftVector.y = leftVector.y / 2
+		leftVector.x = leftVector.x / 2
+//		leftVector.y = leftVector.y / 2
+
+		sendFlag = true;
+	}
+	
+}
+ 
 function onMouseUp(event) { 
 
 	leftVector.reset(0,0);
@@ -504,26 +626,32 @@ function onMouseUp(event) {
 	sendFlag = true;
 }
 
-/*
-Source for keyboard detection: Braden Best:
-https://stackoverflow.com/questions/5203407/how-to-detect-if-multiple-keys-are-pressed-at-once-using-javascript
-*/	
+//##########################################################################################
+//##########################################################################################
+// HANDLE INPUT KEYBOARD
+//##########################################################################################
+//##########################################################################################
+	
 var map = {};
 onkeydown = onkeyup = function(e){
     e = e || event; // to deal with IE
     map[e.keyCode] = e.type == 'keydown';
 	
 	if(map[38]){ // ArrowUp
+//		leftVector.y = -255;
 		leftVector.y = -255;
 	}
 	if(map[40]){ // ArrowDown
-		leftVector.y = 255;
+//		leftVector.y = 255;
+		leftVector.y = 210;
 	}
 	if(map[37]){ // ArrowLeft
-		leftVector.x = -255;
+//		leftVector.x = -255;
+		leftVector.x = -210;
 	}
 	if(map[39]){ // ArrowRight
-		leftVector.x = 255;
+//		leftVector.x = 255;
+		leftVector.x = 210;
 	}
 	
 	if(!map[38] && !map[40]){ // ArrowUp/Down is not pressed
@@ -556,16 +684,41 @@ function mouseOver(minX, minY, maxX, maxY){
 	return(mouseX>minX&&mouseY>minY&&mouseX<maxX&&mouseY<maxY);
 }
 
+//##########################################################################################
+//##########################################################################################
+// SEND CONTROL DATA
+//##########################################################################################
+//##########################################################################################
+
 function sendControls(){
 	if(sendFlag == true){
 		leftVector.x = Math.min(Math.max(parseInt(leftVector.x), -255), 255);
 		leftVector.y = Math.min(Math.max(parseInt(leftVector.y), -255), 255);
 		
 		tankDrive(leftVector.x, -leftVector.y);
-		if(leftMot > 0) leftMot += 90;
-		if(leftMot < 0) leftMot -= 90;
-		if(rightMot > 0) rightMot += 90;
-		if(rightMot < 0) rightMot -= 90;
+
+//##########################################################################################
+// Minimum Speed
+//##########################################################################################
+
+//		if(leftMot > 0) leftMot += 50;
+//		if(leftMot < 0) leftMot -= 50;
+//		if(rightMot > 0) rightMot += 50;
+//		if(rightMot < 0) rightMot -= 50;
+
+//##########################################################################################
+// Maximum Speed
+//##########################################################################################
+
+//		if(leftMot > 100) leftMot = 155;
+//		if(leftMot < -100) leftMot = -155;
+//		if(rightMot > 100) rightMot = 155;
+//		if(rightMot < -100) rightMot = -155;
+
+//##########################################################################################
+// MOTOR Calc
+//##########################################################################################
+
 		leftMot = Math.min(Math.max(parseInt(leftMot), -255), 255);
 		rightMot = Math.min(Math.max(parseInt(rightMot), -255), 255);
 		
@@ -575,59 +728,314 @@ function sendControls(){
 }
 
 </script>
+
 <body scroll="no" style="overflow: hidden">
 <center>
 
 <p id="stream"></p>
 
 <script>
+//##########################################################################################
 // This script automatically picks the right IP for the stream 
 // Thanks to wonx (github.com/wonx)
+//##########################################################################################
+
 host = window.location.hostname;
-img = '<img src="http://' + host + ':9000/?action=stream" style="height:100vh;"/>';
+img = '<img src="http://' + host + ':9000/?action=stream_0" style="height:100vh;"/>';
 //img = '<img src="stream.png" style="height:100vh;"/>';
 document.getElementById("stream").innerHTML = img;
+
+//##########################################################################################
+// Handle Sysstat buttons
+//##########################################################################################
+
+function setsystem(systemstat) {
+
+  if (systemstat == 1) {
+    if(confirm("This will shutdown Noddy.\nAre you sure?")){
+      alert('Shutting down...\nPlease wait 20s before turning the power off.');
+      document.getElementById("shutdown").style = "background-color: grey;"
+      socket.emit('system', systemstat);
+    }
+  }
+
+  if (systemstat == 2) {
+    if(confirm("This will reboot Noddy.\nAre you sure?")){
+      alert('Rebooting now...\nPIll be back as fast as I can...');
+      document.getElementById("reboot").style = "background-color: grey;"
+      socket.emit('system', systemstat);
+    }
+  }
+
+  if (systemstat == 3) {
+    if(confirm("STOP REGUESTED.\nAre you sure?")){
+      document.getElementById("stopscript").style = "background-color: grey;"
+      socket.emit('system', systemstat);
+    }
+  }
+
+}
+
+
+socket.on('system', function(systemstat){
+
+	if (systemstat == 1) {
+		document.getElementById("shutdown").style = "background-color: red;"
+	} else {
+		document.getElementById("shutdown").style = "background-color: #990000;"
+	}
+	if (systemstat == 2) {
+		document.getElementById("reboot").style = "background-color: red;"
+	} else {
+		document.getElementById("reboot").style = "background-color: #990000;"
+	}
+	if (systemstat == 3) {
+		document.getElementById("stopscript").style = "background-color: red;"
+	} else {
+		document.getElementById("stopscript").style = "background-color: #990000;"
+	}
+
+});
+//##########################################################################################
+// Handle ARM buttons
+//##########################################################################################
+
+function setdriver(value1) {
+      socket.emit('arm', value1);
+}
+
+socket.on('arm', function(value1, value2){
+
+  if (value1 == 1) {
+    armstat1 = value2;
+      if (armstat1 == 1) {
+        document.getElementById("arm1").style = "color: #ffff00; background-color: #ff0000;"
+        document.getElementById("arm1").innerText = 'RUN';
+      } else {
+        document.getElementById("arm1").style = "color: #000000; background-color: #550000;"
+        document.getElementById("arm1").innerText = 'STOP';
+      }
+  }
+
+});
+
+
+//##########################################################################################
+// Handle STREAMING buttons
+//##########################################################################################
+
+function setstream(value1, value2) {
+	socket.emit('stream', value1, value2);
+}
+
+socket.on('stream', function(value1, value2){
+
+  if (value1 == 1) {
+    if (value2 == 1) {
+      document.getElementById("stream1_1").style = "background-color: green;"
+    } else {
+      document.getElementById("stream1_1").style = "background-color: transparent;"
+    }
+    if (value2 == 2) {
+      document.getElementById("stream1_2").style = "background-color: green;"
+    } else {
+      document.getElementById("stream1_2").style = "background-color: transparent;"
+    }
+    if (value2 == 3) {
+      document.getElementById("stream1_3").style = "background-color: green;"
+    } else {
+      document.getElementById("stream1_3").style = "background-color: transparent;"
+    }
+    if (value2 == 4) {
+      document.getElementById("stream1_4").style = "background-color: green;"
+    } else {
+      document.getElementById("stream1_4").style = "background-color: transparent;"
+    }
+
+    document.getElementById("stream").innerHTML = img;
+  }
+
+});
+
+//##########################################################################################
+// Handle VIEWING buttons
+//##########################################################################################
+
+function setview(value1, value2) {
+	socket.emit('view', value1, value2);
+}
+
+socket.on('view', function(value1, value2){
+
+  if (value1 == 1) {
+    if (value2 == 1) {
+      document.getElementById("view1f").style = "background-color: green;"
+      host = window.location.hostname;
+      img = '<img src="http://' + host + ':9000/?action=stream_0" style="height:100vh;"/>';
+    } else {
+      document.getElementById("view1f").style = "background-color: transparent;"
+    }
+    if (value2 == 2) {
+      document.getElementById("view1r").style = "background-color: green;"
+      host = window.location.hostname;
+      img = '<img src="http://' + host + ':9000/?action=stream_1" style="height:100vh;"/>';
+    } else {
+      document.getElementById("view1r").style = "background-color: transparent;"
+    }
+
+    document.getElementById("stream").innerHTML = img;
+  }
+
+});
+
+//##########################################################################################
+// Handle RELAY buttons
+//##########################################################################################
+
+function setrelay(value1) {
+      socket.emit('relay', value1);
+}
+
+
+socket.on('relay', function(value1, value2){
+
+  if (value1 == 1) {
+      if (value2 == 1) {
+        document.getElementById("relay1").style = "background-color: green;"
+      } else {
+        document.getElementById("relay1").style = "background-color: transparent;"
+      }
+  } 
+  if (value1 == 2) {
+      if (value2 == 1) {
+        document.getElementById("relay2").style = "background-color: green;"
+      } else {
+        document.getElementById("relay2").style = "background-color: transparent;"
+      }
+  }
+
+});
+
+//##########################################################################################
+// Handle LED buttons
+//##########################################################################################
+
+function setstring(value1, value2) {
+	socket.emit('string', value1, value2);
+}
+
+socket.on('string', function(value1, value2){
+
+  if (value1 == 1) {
+    if (value2 == 1) {
+      document.getElementById("1leds1").style = "background-color: green;"
+    } else {
+      document.getElementById("1leds1").style = "background-color: transparent;"
+    }
+    if (value2 == 2) {
+      document.getElementById("1leds2").style = "background-color: green;"
+    } else {
+      document.getElementById("1leds2").style = "background-color: transparent;"
+    }
+    if (value2 == 3) {
+      document.getElementById("1leds3").style = "background-color: green;"
+    } else {
+      document.getElementById("1leds3").style = "background-color: transparent;"
+    }
+    if (value2 == 4) {
+      document.getElementById("1leds4").style = "background-color: green;"
+    } else {
+      document.getElementById("1leds4").style = "background-color: transparent;"
+    }
+    if (value2 == 5) {
+      document.getElementById("1leds5").style = "background-color: green;"
+    } else {
+      document.getElementById("1leds5").style = "background-color: transparent;"
+    }
+    if (value2 == 6) {
+      document.getElementById("1leds6").style = "background-color: green;"
+    } else {
+      document.getElementById("1leds6").style = "background-color: transparent;"
+    }
+    if (value2 == 7) {
+      document.getElementById("1leds7").style = "background-color: green;"
+    } else {
+      document.getElementById("1leds7").style = "background-color: transparent;"
+    }
+  }
+
+});
+
+
+//##########################################################################################
+// Handle PICTURE button
+//##########################################################################################
+
 function takePicture() {
 	socket.emit('cam', 1);
 }
-function shutdown() {
-    if(confirm("This will shutdown the Pi.\nAre you sure?")){
-		alert('Shutting down...\nPlease wait 20s before turning the power off.');
-		socket.emit('power', 1);
-	}
-}
-// Handle headlight button
-function handleHeadlightClick(cb) {
-  if (cb.checked) {
-	// Turn on headlight
-	headlight = 1;
-  } else {
-	// Turn off headlight
-	headlight = 0;
-  }
-  socket.emit('light', headlight);
-}
+
 
 </script>
 
 </center>
 
+//##########################################################################################
+// LEFT Sidebar
+//##########################################################################################
+
 <div class="sidenav">
-  <center id="temp" style="padding:40%;">0°C</center>
-  <center id="volt" style="padding:40%;">0V</center>
+  <center style="padding:20%;"></center>
+  <center id="temp" style="padding:0%;">No Temp</center>
+  <center style="padding:20%;"></center>
+  <center id="volt" style="padding:0%;">No Volt</center>
+  <center id="vcell" style="padding:5%;">No Cell</center>
+  <center id="v5v" style="padding:5%;">No 5V</center>
+  <center style="padding:10%;"></center>
+  <center id="ileft" style="padding:5%;">No info</center>
+  <center id="iright" style="padding:0%;">No info</center>
+  <center style="padding:20%;"></center>
+  <center id="rssi" style="padding:0%;">No RSSI</center>
+  <center id="qual" style="padding:0%;">No Quality</center>
+  <center style="padding:20%;"></center>
 </div>
+
+//##########################################################################################
+// RIGHT Sidebar
+//##########################################################################################
+
 <div class="sidenav" style="right:0;z-index: 2;">
-  <center class="off_button" type="button" onclick="shutdown()">OFF</center>
-  <center class="cam_button" type="button" onclick="takePicture()"></center>
-  <div>
-    <div class="switch">
-        <input id="cmn-toggle"css class="cmn-toggle cmn-toggle-round-flat" type="checkbox" onclick="handleHeadlightClick(this)">
-        <label for="cmn-toggle">LIGHT</label>
-    </div>
-  </div>
+  <center id="listen"></center>
+  <center id="arm1" class="arming_button" type="button" onclick="setdriver(1)">STOP</center>
+  <center id="takepic" class="mini_button" type="button" onclick="takePicture()">Take Pic</center>
+  <center id="stream1_1" class="mini_button" type="button" onclick="setstream(1,1)">Low 2Mb</center>
+  <center id="stream1_2" class="mini_button" type="button" onclick="setstream(1,2)">Med 6Mb</center>
+  <center id="stream1_3" class="mini_button" type="button" onclick="setstream(1,3)">Hi 10Mb</center>
+  <center id="stream1_4" class="mini_button" type="button" onclick="setstream(1,4)">XT 30Mb</center>
+  <center id="view1f" class="medi_button" type="button" onclick="setview(1,1)">Front</center>
+  <center id="view1r" class="medi_button" type="button" onclick="setview(1,2)">Rear</center>
+  <center style="padding:1%;"></center>
+  <center id="relay1" class="medi_button" type="button" onclick="setrelay(1)">LIGHT</center>
+  <center id="1leds4" class="dual_button" type="button" onclick="setstring(1,4)">Strobe</center>
+  <center id="1leds5" class="dual_button" type="button" onclick="setstring(1,5)">Fast Strobe</center>
+  <center id="1leds6" class="dual_button" type="button" onclick="setstring(1,6)">Rotate Strobe</center>
+  <center id="1leds7" class="dual_button" type="button" onclick="setstring(1,7)">Blue Strobe</center>
+  <center id="1leds1" class="dual_button" type="button" onclick="setstring(1,1)">Static White</center>
+  <center id="1leds3" class="dual_button" type="button" onclick="setstring(1,3)">Static Blue</center>
+  <center id="1leds2" class="dual_button" type="button" onclick="setstring(1,2)">Static Red</center>
+  <center id="1leds0" class="medi_button" type="button" onclick="setstring(1,0)">LEDS OFF</center>
+  <center id="relay2" class="dual_button" type="button" onclick="setrelay(2)">RELAY</center>
+  <center id="stopscript" class="system_button" type="button" onclick="setsystem(3)">Stop Script</center>
+  <center id="reboot" class="system_button" type="button" onclick="setsystem(2)">Reboot</center>
+  <center id="shutdown" class="system_button" type="button" onclick="setsystem(1)">Shutdown</center>
 </div>
 
-
+<script>
+//  host = window.location.hostname;
+//  lyd1 = '<audio class="part14" src="http://' + host + ':8087/" type="audio/mp3" controls="controls" autoplay></audio>';
+//  document.getElementById("listen").innerHTML = lyd1;
+//  document.getElementById("relay1").innerText = host;
+</script>
 
 <div style="position:fixed;bottom:40vh;right:0;padding:25px">
 	

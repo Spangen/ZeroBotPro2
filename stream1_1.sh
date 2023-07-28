@@ -1,0 +1,1 @@
+LD_LIBRARY_PATH=/opt/mjpg-streamer/ /opt/mjpg-streamer/mjpg_streamer -i "input_uvc.so -d /dev/video0 -rot 180 -fps 24 -q 1 -r 160x120" -i "input_uvc.so -d /dev/video1 -rot 180 -fps 24 -q 1 -r 160x120" -o "output_http.so -p 9000 -w /opt/mjpg-streamer/www" > /dev/null 2>&1&
