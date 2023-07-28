@@ -1,3 +1,9 @@
+Must add info on project later. Have just learned to push to GIT. But lots of additions that might interest someone.
+
+Enjoy...
+
+//Spangen
+
 # ZeroBotPro v2
 
 Unofficial update of the *Raspberry Pi Zero FPV Robot* by CoretechR. 
