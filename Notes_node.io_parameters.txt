@@ -1,0 +1,29 @@
+
+Old	Command		params	statusstring		Values		Function
+
+power	system		1	systemstat		0/n		Computer shutdown/reboot/...
+
+arm	armdrive1	1	armstat1		0/1		motor driver arm/disarm controller
+
+pos	mdrive1	(1-n)	2	drivestat1		-255/255	Motor speed/dir
+
+relay	relay1 (1-n)	1	relaystat1
+light
+
+leds	ledstring1	1	ledstat1		0/n  		Select function of ledstring
+
+cam	cam1		1	camstat1		0/n		Take picture/video/...
+
+xhires	stream1		1	streamstat1		0/n		Set cam stream# parameters
+hires
+medres
+lores
+
+-------------
+
+temp	climate		1	cputemp
+power	analogs		5	voltage, vcell, v5v, ileft, iright
+	wifi		2	strength, quality
+	wwan
+	sensors		n	object, distance, pan, tilt, heading
+	gpsstat			posl, posb, gpshight, gpsspeed, gpssat, gpsaccu, gpsfix
